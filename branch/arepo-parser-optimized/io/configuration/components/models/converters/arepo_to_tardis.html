@@ -450,7 +450,7 @@ div.rendered_html tbody tr:hover {
 <p>This parser has been developed for the (not publically available) development version of Arepo, not the public version. Althought it should also work with snapshots from the public version, this has not been tested. If you run into trouble loading the snapshot using the built-in functions, try providing the data manually.</p>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -466,7 +466,9 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/alexh/anaconda3/envs/tardis_test/lib/python3.7/importlib/_bootstrap.py:219: QAWarning: pyne.data is not yet QA compliant.
+/usr/share/miniconda3/envs/tardis/lib/python3.7/site-packages/traitlets/traitlets.py:3050: FutureWarning: --rc={&#39;figure.dpi&#39;: 96} for dict-traits is deprecated in traitlets 5.0. You can pass --rc &lt;key=value&gt; ... multiple times to add items to a dict.
+  FutureWarning,
+/usr/share/miniconda3/envs/tardis/lib/python3.7/importlib/_bootstrap.py:219: QAWarning: pyne.data is not yet QA compliant.
   return f(*args, **kwds)
 </pre></div></div>
 </div>
@@ -474,13 +476,13 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "20862015ac264a84b82018cf23ed72e2"}</script></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "5f443b2650254606a544aaf73228d292"}</script></div>
 </div>
 </div>
 <div class="section" id="Loading-the-simulation-data">
@@ -515,7 +517,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </details><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://github.com/AlexHls/tardis-refdata/raw/arepo-data/arepo_data/arepo_snapshot.json<span class="p">;</span>
@@ -527,27 +529,26 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
---2022-04-01 13:39:01--  https://github.com/AlexHls/tardis-refdata/raw/arepo-data/arepo_data/arepo_snapshot.json
-Loaded CA certificate &#39;/etc/ssl/certs/ca-certificates.crt&#39;
-Resolving github.com (github.com)... 140.82.121.4
-Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+--2022-04-01 12:40:36--  https://github.com/AlexHls/tardis-refdata/raw/arepo-data/arepo_data/arepo_snapshot.json
+Resolving github.com (github.com)... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://media.githubusercontent.com/media/AlexHls/tardis-refdata/arepo-data/arepo_data/arepo_snapshot.json [following]
---2022-04-01 13:39:02--  https://media.githubusercontent.com/media/AlexHls/tardis-refdata/arepo-data/arepo_data/arepo_snapshot.json
-Resolving media.githubusercontent.com (media.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.108.133, ...
-Connecting to media.githubusercontent.com (media.githubusercontent.com)|185.199.109.133|:443... connected.
+--2022-04-01 12:40:36--  https://media.githubusercontent.com/media/AlexHls/tardis-refdata/arepo-data/arepo_data/arepo_snapshot.json
+Resolving media.githubusercontent.com (media.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to media.githubusercontent.com (media.githubusercontent.com)|185.199.111.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 222907544 (213M) [application/octet-stream]
 Saving to: ‘arepo_snapshot.json’
 
-arepo_snapshot.json 100%[===================&gt;] 212.58M  6.69MB/s    in 32s
+arepo_snapshot.json 100%[===================&gt;] 212.58M   203MB/s    in 1.0s
 
-2022-04-01 13:39:47 (6.55 MB/s) - ‘arepo_snapshot.json’ saved [222907544/222907544]
+2022-04-01 12:40:43 (203 MB/s) - ‘arepo_snapshot.json’ saved [222907544/222907544]
 
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arepo_snapshot.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
@@ -598,7 +599,7 @@ Nuclear data shape (per element):  (1219728,)
 <li><p><strong>Full profile</strong>: This averages over the whole simulation</p></li>
 </ul>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">profile</span> <span class="o">=</span> <span class="n">arepo</span><span class="o">.</span><span class="n">ConeProfile</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">xnuc</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
@@ -615,7 +616,7 @@ Nuclear data shape (per element):  (1219728,)
 <p>The keyword <code class="docutils literal notranslate"><span class="pre">opening_angle=40</span></code> is only needed for the cone profile. The other modes do not accept this keyword! The angle itself is the opening angle of the full cone and NOT the angle between the central x-axis and the cone!</p>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">profile</span><span class="o">.</span><span class="n">create_profile</span><span class="p">(</span><span class="n">opening_angle</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
@@ -629,8 +630,7 @@ Nuclear data shape (per element):  (1219728,)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_18_0.png" src="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_18_0.png" />
-</div>
+<img alt="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_18_0.svg" src="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_18_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="Plotting-the-data">
@@ -645,7 +645,7 @@ Nuclear data shape (per element):  (1219728,)
 <h2>Selecting a specific region<a class="headerlink" href="#Selecting-a-specific-region" title="Permalink to this headline">¶</a></h2>
 <p>In many cases you only want a very specific region from the snapshot, e.g. cutting out the dense, optically thick regions. This can be acchieved using the keywords <code class="docutils literal notranslate"><span class="pre">inner_radius</span></code> and <code class="docutils literal notranslate"><span class="pre">outer_radius</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">profile</span><span class="o">.</span><span class="n">create_profile</span><span class="p">(</span><span class="n">opening_angle</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">inner_radius</span><span class="o">=</span><span class="mf">1e11</span><span class="p">,</span> <span class="n">outer_radius</span><span class="o">=</span><span class="mf">2e11</span><span class="p">)</span>
@@ -659,8 +659,7 @@ Nuclear data shape (per element):  (1219728,)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_21_0.png" src="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_21_0.png" />
-</div>
+<img alt="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_21_0.svg" src="../../../../../_images/io_configuration_components_models_converters_arepo_to_tardis_21_0.svg" /></div>
 </div>
 <p>Once you have created a profile of the desired region, you can export the profile to a <code class="docutils literal notranslate"><span class="pre">csvy</span></code> file, which in turn can be used in a TARDIS model. Here you have to specify how many shells you want to export. The profiles are rebinned automatically using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binned_statistic.html">Scipys binned_statistic function</a>, using the mean value of the data in each bin.</p>
 <div class="nbinput docutils container">
@@ -677,7 +676,7 @@ Nuclear data shape (per element):  (1219728,)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&#39;snapshot_converted_to_tardis_0.csvy&#39;
+&#39;snapshot_converted_to_tardis.csvy&#39;
 </pre></div></div>
 </div>
 <p>During the export, the <code class="docutils literal notranslate"><span class="pre">yaml</span></code> header is automatically written and includes the time of the screenshot as the time for both the nuclear data as well as the density profile. Per default, the positive axis will be exported. the negative axis can be exported with <code class="docutils literal notranslate"><span class="pre">direction=&quot;neg&quot;</span></code>.</p>
@@ -701,7 +700,9 @@ Nuclear data shape (per element):  (1219728,)
 <p class="admonition-title fa fa-exclamation-circle">Note</p>
 <p>The command line tool does only work with snapshot files, not with e.g. json files. It is in any case not advised to use json files as an intermediate step, as the become huge for higher resolutions.</p>
 </div>
-</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"585cd5f09a4e431692101124f7606605": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "20px"}}, "721cf19f3aa54a1bbc8a053805f5c8a0": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "fce3b0f7a1d54ca596d856b627010c62": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "info", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_585cd5f09a4e431692101124f7606605", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_721cf19f3aa54a1bbc8a053805f5c8a0", "value": 0.0}}, "b36acb9d50404f018f9635b2ac2e2440": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2897c61ecb794a8c9ed013bfdc66af1a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "c992767cf8124cf59a2b2b2d1b5463f2": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_b36acb9d50404f018f9635b2ac2e2440", "placeholder": "\u200b", "style": "IPY_MODEL_2897c61ecb794a8c9ed013bfdc66af1a", "value": "Iterations:"}}, "4bb0fed2dadf4a90b647624d60af5869": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c98c33bae90a421cb03ac8e181042602": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "cfe5d8ce779f42f0aced84fdd8a5b5ce": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_4bb0fed2dadf4a90b647624d60af5869", "placeholder": "\u200b", "style": "IPY_MODEL_c98c33bae90a421cb03ac8e181042602", "value": "0/? [00:00&lt;?, ?it/s]"}}, "4f6cb75bb5c646a9af720d910d57b66d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "20862015ac264a84b82018cf23ed72e2": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_c992767cf8124cf59a2b2b2d1b5463f2", "IPY_MODEL_fce3b0f7a1d54ca596d856b627010c62", "IPY_MODEL_cfe5d8ce779f42f0aced84fdd8a5b5ce"], "layout": "IPY_MODEL_4f6cb75bb5c646a9af720d910d57b66d"}}, "363710137abf41b3a9c770fb51192de2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "20px"}}, "3da0d688a38445828313fbf54afdbc27": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "ac95f1c3b5244a9096a121dca74215e3": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "info", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_363710137abf41b3a9c770fb51192de2", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_3da0d688a38445828313fbf54afdbc27", "value": 0.0}}, "ade8879da36e4702b3be79dbadd34a0d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "db8c5a283bbd4371a3d3e22341f4f764": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "3025a49873154a259509e2ee63a48af6": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_ade8879da36e4702b3be79dbadd34a0d", "placeholder": "\u200b", "style": "IPY_MODEL_db8c5a283bbd4371a3d3e22341f4f764", "value": "Packets:   "}}, "45a666b9e9e64890849321031b8398e4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e0240137399f48318ec0b1cc816bb80a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "33234d87acca479e8ead98e59e5f1e29": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_45a666b9e9e64890849321031b8398e4", "placeholder": "\u200b", "style": "IPY_MODEL_e0240137399f48318ec0b1cc816bb80a", "value": "0/? [00:00&lt;?, ?it/s]"}}, "0efc018f12294b6c97b85c8985598917": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5f443b2650254606a544aaf73228d292": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_3025a49873154a259509e2ee63a48af6", "IPY_MODEL_ac95f1c3b5244a9096a121dca74215e3", "IPY_MODEL_33234d87acca479e8ead98e59e5f1e29"], "layout": "IPY_MODEL_0efc018f12294b6c97b85c8985598917"}}}, "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 
